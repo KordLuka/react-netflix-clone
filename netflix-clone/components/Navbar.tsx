@@ -32,42 +32,42 @@ const Navbar = () => {
     }, [])
 
     return (
-        <nav className="w-full fixed z-40">
+        <nav className='fixed z-40 w-full'>
             <div
                 className={`
-            px-4
-            md:px-16
-            py-6
             flex
             flex-row
             items-center
+            px-4
+            py-6
             transition
             duration-500
+            md:px-16
             ${showBackground ? 'bg-zinc-900 bg-opacity-90' : ''}
             `}
             >
-                <img className="h-4 lg:h-7" src="/images/logo.png" alt="logo" />
+                <img className='h-4 lg:h-7' src='/images/logo.png' alt='logo' />
                 <div
-                    className="
-                    flex-row
+                    className='
                     ml-8
-                    gap-7
                     hidden
+                    flex-row
+                    gap-7
                     lg:flex
-                "
+                '
                 >
-                    <NavbarItem label="Home" />
-                    <NavbarItem label="Series" />
-                    <NavbarItem label="Films" />
-                    <NavbarItem label="New & Popular" />
-                    <NavbarItem label="My List" />
-                    <NavbarItem label="Browse by languages" />
+                    <NavbarItem label='Home' />
+                    <NavbarItem label='Series' />
+                    <NavbarItem label='Films' />
+                    <NavbarItem label='New & Popular' />
+                    <NavbarItem label='My List' />
+                    <NavbarItem label='Browse by languages' />
                 </div>
                 <div
                     onClick={toggleMobileMenu}
-                    className="lg:hidden flex flex-row items-center gap-2 ml-8 cursor-pointer relative"
+                    className='relative ml-8 flex cursor-pointer flex-row items-center gap-2 lg:hidden'
                 >
-                    <p className="text-white text-sm">Browse</p>
+                    <p className='text-sm text-white'>Browse</p>
                     <BsChevronDown
                         className={`text-white transition ${
                             showMobileMenu ? 'rotate-180' : 'rotate-0'
@@ -75,19 +75,19 @@ const Navbar = () => {
                     />
                     <MobileMenu visible={showMobileMenu} />
                 </div>
-                <div className="flex flex-row ml-auto gap-7 items-center">
-                    <div className="text-gray-200 hover:text-gray-300 cursor-pointer transition">
+                <div className='ml-auto flex flex-row items-center gap-7'>
+                    <div className='cursor-pointer text-gray-200 transition hover:text-gray-300'>
                         <BsSearch />
                     </div>
-                    <div className="text-gray-200 hover:text-gray-300 cursor-pointer transition">
+                    <div className='cursor-pointer text-gray-200 transition hover:text-gray-300'>
                         <BsBell />
                     </div>
                     <div
                         onClick={toggleAccountMenu}
-                        className="flex flex-row items-center gap-2 cursor-pointer relative"
+                        className='relative flex cursor-pointer flex-row items-center gap-2'
                     >
-                        <div className="w-6 h-6 lg:w-10 lg:h-10 rounded-md overflow-hidden">
-                            <img src="/images/default-blue.png" />
+                        <div className='h-6 w-6 overflow-hidden rounded-md lg:h-10 lg:w-10'>
+                            <img src='/images/default-blue.png' />
                         </div>
                         <BsChevronDown
                             className={`text-white transition ${

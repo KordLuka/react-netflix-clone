@@ -3,35 +3,45 @@ import React from 'react'
 import { InformationCircleIcon } from '@heroicons/react/24/outline'
 
 const Billboard = () => {
-    const { data } = useBillboard()
+    const { data } =
+        useBillboard()
 
     return (
-        <div className="relative h-[56.25vw]">
+        <div className='relative h-[56.25vw]'>
             <video
-                className="
-                    w-full
+                className='
                     h-[56.25vw]
+                    w-full
                     object-cover
                     brightness-[50%]
                     transition
-                "
+                '
                 autoPlay
                 muted
                 loop
-                poster={data?.thumbnailUrl}
-                src={data?.videoUrl}
+                poster={
+                    data?.thumbnailUrl
+                }
+                src={
+                    data?.videoUrl
+                }
             ></video>
-            <div className="absolute top-[30%] md:top-[50%] ml-4 md:ml-16">
-                <p className="text-white text-1xl md:text-5xl h-full w-[50%] lg:text-6xl font-bold drop-shadow-xl">
-                    {data?.title}
+            <div className='absolute top-[30%] ml-4 md:top-[50%] md:ml-16'>
+                <p className='text-1xl h-full w-[50%] font-bold text-white drop-shadow-xl md:text-5xl lg:text-6xl'>
+                    {
+                        data?.title
+                    }
                 </p>
-                <p className="text-white text-[8px] md:text-lg mt-3 md:mt-8 w-[90%] md:w-[80%] lg:w-[50%] drop-shadow-xl">
-                    {data?.description}
+                <p className='mt-3 w-[90%] text-[8px] text-white drop-shadow-xl md:mt-8 md:w-[80%] md:text-lg lg:w-[50%]'>
+                    {
+                        data?.description
+                    }
                 </p>
-                <div className="flex flex-row items-center mt-3 md:mt-4 gap-3">
-                    <button className="bg-white text-white bg-opacity-30 rounded-md py-1 md:py-2 px-2 md:px-4 w-auto text-xs lg:text-lg font-semibold flex flex-row items-center hover:bg-opacity-20 transition">
-                        <InformationCircleIcon className="w-4 md:w-7 mr-1" />
-                        More Info
+                <div className='mt-3 flex flex-row items-center gap-3 md:mt-4'>
+                    <button className='flex w-auto flex-row items-center rounded-md bg-white bg-opacity-30 px-2 py-1 text-xs font-semibold text-white transition hover:bg-opacity-20 md:px-4 md:py-2 lg:text-lg'>
+                        <InformationCircleIcon className='mr-1 w-4 md:w-7' />
+                        More
+                        Info
                     </button>
                 </div>
             </div>

@@ -1,62 +1,62 @@
-import React from "react";
+import React from 'react'
 
 interface InputProps {
-  id: string;
-  onChange: any;
-  value: string;
-  label: string;
-  type?: string;
+    id: string
+    onChange: any
+    value: string
+    label: string
+    type?: string
 }
 
 const Input: React.FC<InputProps> = ({ id, onChange, value, label, type }) => {
-  return (
-    <div className="relative">
-      <input
-        id={id}
-        value={value}
-        type={type}
-        onChange={onChange}
-        className="
-        block
-        rounded-md
-        px-6
-        pt-6
-        pb-1
-        w-full
+    return (
+        <div className='relative'>
+            <input
+                id={id}
+                value={value}
+                type={type}
+                onChange={onChange}
+                className='
         text-md
-        text-white
-        bg-neutral-700
+        peer
+        block
+        w-full
         appearance-none
+        rounded-md
+        bg-neutral-700
+        px-6
+        pb-1
+        pt-6
+        text-white
         focus:outline-none
         focus:ring-0
-        peer
-    "
-        placeholder=" "
-      />
-      <label
-        htmlFor={id}
-        className="
-        absolute 
+    '
+                placeholder=' '
+            />
+            <label
+                htmlFor={id}
+                className='
         tex-md 
-        text-zinc-400 
-        duration-150 
-        transform 
+        absolute 
+        left-6 
+        top-4 
+        z-10 
+        origin-[0]
         -translate-y-3
         scale-75
-        top-4
-        z-10
-        origin-[0]
-        left-6
-        peer-placeholder-shown:scale-100
+        transform
+        text-zinc-400
+        duration-150
         peer-placeholder-shown:translate-y-0
-        peer-focus:scale-75
+        peer-placeholder-shown:scale-100
         peer-focus:-translate-y-3
-        "
-      >
-        {label}
-      </label>
-    </div>
-  );
-};
+        peer-focus:scale-75
+        '
+            >
+                {label}
+            </label>
+        </div>
+    )
+}
 
-export default Input;
+export default Input
